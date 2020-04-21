@@ -6,12 +6,8 @@
     </header>
     <section class="mainbox">
       <div class="column">
-        <Bar></Bar>
-        <div class="panel line">
-          <h2>折线图-人员变化</h2>
-          <div class="chart"></div>
-          <div class="panel-footer"></div>
-        </div>
+        <bar></bar>
+        <line-chart></line-chart>  
         <div class="panel pie">
           <h2>饼形图-年龄分布</h2>
           <div class="chart"></div>
@@ -63,6 +59,7 @@
 
 <script>
 import Bar from "@/components/bar";
+import LineChart from '@/components/line';
 
 export default {
   name: "App",
@@ -73,7 +70,8 @@ export default {
     };
   },
   components: {
-    Bar
+    Bar,
+    LineChart
   },
   created() {
     clearTimeout(this.setTimer);
@@ -117,15 +115,15 @@ export default {
   margin: 0;
   padding: 0;
   /*  背景图定位 / 背景图尺寸  cover 完全铺满容器  contain 完整显示在容器内 */
-  background: url('./assets/images/bg.jpg') no-repeat #000;
+  background: url("./assets/images/bg.jpg") no-repeat #000;
   background-size: cover;
   /* 行高是字体1.15倍 */
   line-height: 1.15;
 }
-  header {
+header {
   position: relative;
   height: 1.25rem;
-  background: url('./assets/images/head_bg.png') no-repeat top center;
+  background: url("./assets/images/head_bg.png") no-repeat top center;
   background-size: 100% 100%;
 }
 header h1 {

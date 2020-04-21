@@ -4,6 +4,10 @@ import "lib-flexible";
 import '@/assets/css/reset.css'
 import '@/assets/css/index.css'
 
+// 引入echarts
+import echarts from 'echarts'
+Vue.prototype.$echarts = echarts
+
 Vue.config.productionTip = false;
 
 new Vue({
