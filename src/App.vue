@@ -8,11 +8,7 @@
       <div class="column">
         <bar></bar>
         <line-chart></line-chart>  
-        <div class="panel pie">
-          <h2>饼形图-年龄分布</h2>
-          <div class="chart"></div>
-          <div class="panel-footer"></div>
-        </div>
+        <pie-chart></pie-chart>
       </div>
       <div class="column">
         <div class="no">
@@ -37,11 +33,7 @@
         </div>
       </div>
       <div class="column">
-        <div class="panel bar1">
-          <h2>柱状图-技能掌握</h2>
-          <div class="chart"></div>
-          <div class="panel-footer"></div>
-        </div>
+        <skill></skill>
         <div class="panel line1">
           <h2>折线图-播放量</h2>
           <div class="chart"></div>
@@ -60,6 +52,8 @@
 <script>
 import Bar from "@/components/bar";
 import LineChart from '@/components/line';
+import PieChart from '@/components/pie';
+import Skill from '@/components/skill'
 
 export default {
   name: "App",
@@ -71,7 +65,9 @@ export default {
   },
   components: {
     Bar,
-    LineChart
+    LineChart,
+    PieChart,
+    Skill
   },
   created() {
     clearTimeout(this.setTimer);
